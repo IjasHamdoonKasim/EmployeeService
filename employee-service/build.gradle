@@ -1,0 +1,37 @@
+plugins {
+	 id 'org.springframework.boot' version '2.2.4.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+}
+
+group = 'com.sgic.employee.server'
+version = '0.0.1'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter'
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.5.2'
+	//implementation group: 'org.springframework.cloud', name: 'spring-cloud-starter-netflix-eureka-server', version: '2.2.9.RELEASE'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.17'
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '2.5.2'
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-rest', version: '2.5.3'
+	compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.22'
+	// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-logging
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-logging', version: '2.6.0'
+	//implementation group: 'org.springframework.cloud', name: 'spring-cloud-starter-sleuth', version: '3.0.3'
+
+	implementation group: 'org.apache.poi', name: 'poi-ooxml', version: '4.1.0'
+	implementation group: 'org.apache.poi', name: 'poi', version: '4.1.0'
+
+
+	
+}
+
+test {
+	useJUnitPlatform()
+}
